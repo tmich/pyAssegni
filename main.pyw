@@ -2,7 +2,7 @@ from tkinter import ttk
 import tkinter as tk
 from views import MainView, NuovoAssegno
 import models
-from models import session, User, Assegno, Azienda, ContoCorrente, Libretto, Fornitore
+from models import session, Assegno, Azienda, ContoCorrente, Libretto, Fornitore
 
 root=tk.Tk()
 

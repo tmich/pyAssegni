@@ -25,6 +25,7 @@ class NuovoAssegno(ttk.Frame):
 		self.libretto.trace('w', self.on_libretto)
 		self.assegno=tk.StringVar()
 		self.fornitore=tk.StringVar()
+		self.importo=tk.DoubleVar()
 		ttk.Label(self, text='Azienda').grid(row=0, column=0)
 		self.cbazienda = ttk.Combobox(self, textvariable=self.azienda, values=aziende, postcommand=self.on_post)
 		self.cbazienda.grid(row=0, column=1)
@@ -40,6 +41,9 @@ class NuovoAssegno(ttk.Frame):
 		ttk.Label(self, text='Intestato a').grid(row=4, column=0)
 		self.cbforn = ttk.Combobox(self, textvariable=self.fornitore, values=fornitori)
 		self.cbforn.grid(row=4, column=1)
+		ttk.Label(self, text='Importo').grid(row=5, column=0)
+		self.tximpo = ttk.Entry(self, textvariable=self.importo)
+		self.tximpo.grid(row=5, column=1)
 	
 	def set_conti(self, conti):
 		self.conti=conti
